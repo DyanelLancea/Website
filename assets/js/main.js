@@ -76,7 +76,10 @@
 							$section.scrollex({
 								mode: 'middle',
 								initialize: function() {
-									$section.addClass('inactive');
+//
+									// Deactivate section.
+										if (browser.canUse('transition'))
+											$section.addClass('inactive');
 
 								},
 								enter: function() {

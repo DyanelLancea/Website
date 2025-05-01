@@ -4,11 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Dyanel Lancea E. Balandra - My Site</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="assets/css/styles.css"/>
-    </head>
+      </head>
 
     <body class="is-preload">
-
+      
         <!-- Wrapper -->
         <div id="wrapper">
             
@@ -16,185 +18,276 @@
             <header id ="header" class="alt">
                 <h1>Hello,</h1>
                 <p>and welcome to Lancea's website :)</p>
-            </header>
+            </header> 
 
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="#header">Introduction</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <!-- Navbar with Scrollspy -->
+            <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 sticky-top">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link delayed-scroll" href="#projects">Section 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link delayed-scroll" href="#contact">Section 2</a>
+                </li>
+              </ul>
             </nav>
 
             <!-- Main -->
             <div id="main">
                 <!-- Introduction -->
-                    <section id="intro" class="main">
-                        <div class="spotlight">
-                            <div class="content">
-                                <header class="major">
-                                    <h2>My name is Lancea!</h2>
-                                </header>
-                                <p>I am a graduating Computer Engineering Student of 
-                                    <a href="https://www.tp.edu.sg/schools-and-courses/students/schools/eng/computer-engineering.html">Temasek Polytechnic.</a> 
-                                    You are looking at my website that I personally designed and coded. Currently, I am enjoying my holidays by working as a Freelance STEM Trainer (under 
-                                    <a href="https://www.linkedin.com/company/ep-education-sg/?originalSubdomain=sg">EP-Tec Solutions</a>), as well as creating my own projects! Check them out in the 
-                                    <a href="#projects">Projects</a> section below.
-                                </p>
-                                <a href="resumePage/resume.html" class="button">Take a look at my Resume</a>
-                            </div>
-                            <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+                <section id="intro" class="main">
+                    <div class="spotlight">
+                        <div class="content">
+                            <header class="major">
+                                <h2>My name is Lancea!</h2>
+                            </header>
+                            <p>I am a graduating Computer Engineering Student of 
+                                <a href="https://www.tp.edu.sg/schools-and-courses/students/schools/eng/computer-engineering.html">Temasek Polytechnic.</a> 
+                                You are looking at my website that I personally designed and coded. Currently, I am enjoying my holidays by working as a Freelance STEM Trainer (under 
+                                <a href="https://www.linkedin.com/company/ep-education-sg/?originalSubdomain=sg">EP-Tec Solutions</a>), as well as creating my own projects! Check them out in the 
+                                <a href="#projects">Projects</a> section below.
+                            </p>
+                            <a href="resumePage/resume.html" class="button">Take a look at my Resume</a>
                         </div>
-                    </section>
-                        
-                <!-- About Me -->
-                 <section id="abme">
-                    <h1> About Me: </h1>
-
-                    <!-- Work Experience -->
-                    <div class ="workExp">
-                        <h2>Work Experience </h2>
-                        <h3>EP-Tec Solutions <span class="date"> Apr 2024-Aug 2024 </h3>
-                        <h4>EP-Edu dept. Intern</h4>
-                        <ul>
-                            <li>Research and curate educational programmes for educational institutes (Primary 4 to Secondary 2 students).</li>
-                            <li>Educational programmes includes coding, loT, robotics, drones, and STEM.</li>
-                            <li>Manage and teach classes for lessons.</li>
-                        </ul> 
-                    </div>
-
-                    <div class="education">
-                        <h2>Education</h2>
-                        <h3>Diploma in Computer Engineering <span class="date"> 2022-2025</span></h3>
-                        <p>Temasek Polytechnic, School of Engineering
-                            <br> Cumilitive GPA:3.7/4.0, Temasek Polytechnic Scholarship (2022-2024)
-                        </p>
-                        
-                        <h3>Relevant Courses:</h3>
-                        <ul>
-                            <li>Full-Stack Development</li>
-                            <li>AI & Machine Learning</li>
-                            <li>Internet of Things (IoT)</li>
-                            <li>Object Oriented Programming</li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="cca">
-
-                    </div>
-                 </section>
-
-
-                <!-- Projects Section -->
-                <section id="projects">
-                    <div class="grid-item">
-                        <h2>Projects</h2>
-                        <ul>
-                            <li><a href="index.html">Project 1 </a></li>
-                            <li><a href="index.html">Project 2 </a></li>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                        </ul>
+                        <span class="image"><img src="images/pic01.jpg" alt="" /></span>
                     </div>
                 </section>
+                        
 
-                
-                 <!-- Testimonials -->
-                <section id="testimonial">
-                    <h2>Reviews from my Teachers</h2>
-                    <div class="testimonial-grid">
-                        <div class="testimonial">
-                            <p>"John doe was a brilliant student, always stood out with his assignments."</p>
-                            <cite>Jane Doe<br>Assistant Professor</cite>
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm passionate about ...</p>
+                    
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="work-tab" data-bs-toggle="tab" data-bs-target="#work" type="button" role="tab">Work Experience</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="edu-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab">Education</button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Tab content -->
+                    <div class="tab-content" id="aboutTabsContent">
+                        <div class="tab-pane fade show active" id="work" role="tabpanel" aria-labelledby="work-tab">
+                        <ul>
+                            <li><strong>Intern at EP-Tec Solutions</strong> (June 2023 - Aug 2023)
+                            <p>Worked on various projects involving XYZ.</p>
+                            </li>
+                            <!-- More work experiences -->
+                        </ul>
                         </div>
-                        <div class="testimonial">
-                            <p>"John doe was a brilliant student, always stood out with his assignments."</p>
-                            <cite>Jane Doe<br>Assistant Professor</cite>
-                        </div>
-                        <div class="testimonial">
-                            <p>"John doe was a brilliant student, always stood out with his assignments."</p>
-                            <cite>Jane Doe<br>Assistant Professor</cite>
+                        <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="edu-tab">
+                        <ul>
+                            <li><strong>Temasek Polytechnic</strong> (Diploma in XYZ)
+                            <p>Relevant courses included ...</p>
+                            </li>
+                            <!-- More education experiences -->
+                        </ul>
                         </div>
                     </div>
-                </section> 
-                
-                    
-                <!-- Contact -->
-                    <section id="contact">
-                        <div class="grid-item">
-                            <h2>Contacts</h2>
-                            <ul>
-                                <li><a href="index.html">LinkedIn </a></li>
-                                <li><a href="index.html">GitHub </a></li>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                            </ul>
-                        </div>
+                  </section>
+                      
+                  <section id = "projects">
+                    <div class="container my-5">
+                          <h2 class="text-center mb-4">My Projects</h2>
+                        
+                          <div class="project-container">
+                            
+                            <!-- Left Arrow -->
+                            <button class="nav-btn nav-left" onclick="scrollLeft()">
+                              &#10094;
+                            </button>
+                        
+                            <!-- Cards Scrollable Row -->
+                            <div class="project-cards-wrapper" id="cardsWrapper">
+                        
+                              <!-- Card 1 -->
+                              <div class="card project-card">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 1">
+                                <div class="card-body">
+                                  <h5 class="card-title">Project 1</h5>
+                                  <p class="card-text">Short description 1.</p>
+                                </div>
+                              </div>
+                        
+                              <!-- Card 2 -->
+                              <div class="card project-card">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 2">
+                                <div class="card-body">
+                                  <h5 class="card-title">Project 2</h5>
+                                  <p class="card-text">Short description 2.</p>
+                                </div>
+                              </div>
+                        
+                              <!-- Card 3 -->
+                              <div class="card project-card">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 3">
+                                <div class="card-body">
+                                  <h5 class="card-title">Project 3</h5>
+                                  <p class="card-text">Short description 3.</p>
+                                </div>
+                              </div>
+                        
+                              <!-- Card 4 -->
+                              <div class="card project-card">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 4">
+                                <div class="card-body">
+                                  <h5 class="card-title">Project 4</h5>
+                                  <p class="card-text">Short description 4.</p>
+                                </div>
+                              </div>
+                        
+                              <!-- Card 5 -->
+                              <div class="card project-card">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 5">
+                                <div class="card-body">
+                                  <h5 class="card-title">Project 5</h5>
+                                  <p class="card-text">Short description 5.</p>
+                                </div>
+                              </div>
+                        
+                            </div>
+                        
+                            <!-- Right Arrow -->
+                            <button class="nav-btn nav-right" onclick="scrollRight()">
+                              &#10095;
+                            </button>
+                        
+                          </div>
+                        
+                    </div>
+                  </section>
 
-                    </section>
-
-
-            </div>            
         </div>
 
-        <!-- Footer -->
-        <footer>
-            <p>© all rights reserved 2025</p>
-        </footer>
+<!-- Reviews Section -->
+<section class="reviews-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">What My Teachers Say</h2>
+  
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">"Dyanel is a hardworking and dedicated student. He always shows great enthusiasm and passion for learning new technologies."</p>
+              <h5 class="card-title mt-4 mb-0">Mr. John Doe</h5>
+              <small class="text-muted">Computer Science Teacher</small>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Testimonial 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">"I have seen Dyanel grow immensely throughout the year. His projects are thoughtful, well-executed, and impressive."</p>
+              <h5 class="card-title mt-4 mb-0">Ms. Jane Smith</h5>
+              <small class="text-muted">Project Supervisor</small>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Testimonial 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">"An exceptional student who constantly strives for excellence. Dyanel’s creativity and attention to detail are outstanding."</p>
+              <h5 class="card-title mt-4 mb-0">Mr. Alan Brown</h5>
+              <small class="text-muted">Technology Instructor</small>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+
+
+
+<!-- Contact Section -->
+ <section id="contact">
+  <div class="contact-section">
+    <div class="container">
+      <h2 class="mb-4">Get In Touch</h2>
+
+      <div class="contact-icons mb-4">
+        <!-- GitHub -->
+        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:your@email.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <a href="mailto:your@email.com" class="email-link">
+        your@email.com
+      </a>
+
+    </div>
+  </div>
+</section>
+
 
         <!-- Scripts -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/main.js"></script>
-                    
+            <script src="assets/js/project.cards.js"></script>   
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+              document.querySelectorAll('.delayed-scroll').forEach(link => {
+                  link.addEventListener('click', function(e) {
+                      e.preventDefault(); // Prevent default jump to section
+              
+                      const target = document.querySelector(this.getAttribute('href'));
+                      if (!target) return;
+              
+                      const startPosition = window.scrollY;
+                      const targetPosition = target.offsetTop;
+                      const distance = targetPosition - startPosition;
+                      const duration = 1500; // Total duration of the scroll (ms)
+              
+                      let startTime = null;
+              
+                      // Ease function that starts slow and becomes faster
+                      function ease(t) {
+                          return t * t * (3 - 2 * t);  // Smooth acceleration curve
+                      }
+              
+                      // Scroll function using requestAnimationFrame
+                      function scrollToTarget(currentTime) {
+                          if (startTime === null) startTime = currentTime;
+                          const timeElapsed = currentTime - startTime;
+                          const progress = Math.min(timeElapsed / duration, 1); // Ensure the progress doesn't exceed 1
+              
+                          // Calculate the current scroll position
+                          const easedProgress = ease(progress);
+                          window.scrollTo(0, startPosition + distance * easedProgress);
+              
+                          // Continue the animation until the scroll reaches the target
+                          if (timeElapsed < duration) {
+                              requestAnimationFrame(scrollToTarget);
+                          }
+                      }
+              
+                      // Start the animation
+                      requestAnimationFrame(scrollToTarget);
+                  });
+              });
+              </script>
+  
+  
     </body>
+
 
 </html>

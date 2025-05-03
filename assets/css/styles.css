@@ -60,7 +60,6 @@ body {
     }
 }
 
-/* Header */
 #header {
     animation: fadeSlideDown 2s ease-out 0.5s forwards;
     height: 30vh; /* Fill full screen height */
@@ -73,236 +72,57 @@ body {
     padding: 2em;
 }
 
-/* Animation for heading */
 #header h1 {
-    margin: 0 0 0.25em 0;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
     opacity: 0;
     animation: fadeSlideDown 1s ease-out forwards;
     animation-delay: 0.2s;
 }
 
-/* Animation for paragraph */
 #header p {
-    font-size: 1.5em;
+    font-size: clamp(1rem, 3vw, 1.75rem);
     letter-spacing: -0.025em;
     opacity: 0;
     animation: fadeSlideDown 1s ease-out forwards;
     animation-delay: 1s;
 }
-
-
-
-
-
-    /* Reduces padding to not take up too much space
-    on medium-sized screens.*/
-    @media screen and (max-width: 1280px) {
-
-        #header {
-            padding: 4em 4em 0.1em 4em ;
-        }
-
-            #header.alt {
-                padding: 6em 4em 3em 4em ;
-            }
-    }
-
-    /* Smaller devices*/
-    @media screen and (max-width: 980px) {
-
-        #header {
-            padding: 4em 3em 0.1em 3em ;
-        }
-
-            #header.alt {
-                padding: 5em 3em 2em 3em ;
-            }
-
-    }
-
-    @media screen and (max-width: 736px) {
-
-        #header {
-            padding: 3em 2em 0.1em 2em ;
-        }
-
-            #header p {
-                font-size: 1em;
-                letter-spacing: 0;
-            }
-
-            #header.alt {
-                padding: 4em 2em 1em 2em ;
-            }
-
-                #header.alt h1 {
-                    font-size: 2.5em;
-                }
-
-    }
-
-    @media screen and (max-width: 480px) {
-
-        #header {
-            padding: 3em 1.5em 0.1em 1.5em ;
-        }
-
-            #header.alt {
-                padding: 4em 1.5em 1em 1.5em ;
-            }
-
-    }
-
-    @media screen and (max-width: 360px) {
-
-        #header {
-            padding: 2.5em 1em 0.1em 1em ;
-        }
-
-            #header.alt {
-                padding: 3.5em 1em 0.5em 1em ;
-            }
-
-    }
+ 
     
+/* Navbar */
+#Navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    z-index: 999;
+}
     
-    #navbar-example2 {
-        background-color: #ffffff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        padding: 10px 20px;
-        z-index: 999;
-      }
-      
-      #navbar-example2 .nav-link {
-        color: #333;
-        margin: 0 10px;
-        transition: color 0.3s ease;
-      }
-      
-      #navbar-example2 .nav-link:hover {
-        color: #007bff;
-      }
-      
-      #navbar-example2 .nav-link.active {
-        font-weight: bold;
-        color: #007bff;
-      }
+#Navbar .nav-link {
+    color: #333;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
 
-#navbar-example2 .navbar{
+#Navbar .nav-link:hover {
+    color: #007bff;
+}
+
+#Navbar .nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#Navbar .navbar{
     margin-bottom:0;
 }
 
+
+
 #about {
-    margin-top: 50px;
-    }
+    margin: 2em 3em;
+}
    
-
-
-/* Spotlight */
-.spotlight {
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    gap: 3em;
-    max-width: 1200px; /* keep it centered within a container */
-    margin: 2em auto;  /* center the whole spotlight */
-    padding: 0 2em;    /* add padding so content isn't too far left */
-    padding-top: 1em;
-    margin-bottom: 50px;
-}
-
-    .spotlight .content {
-        -moz-flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-    }
-
-        .spotlight .content > :last-child {
-            margin-bottom: 0;
-        }
-
-        .spotlight .content header.major {
-            margin: 0 0 2em 0;
-        }
-
-    .spotlight .image {
-        display: inline-block;
-        margin-left: 4em;
-        padding: 0.65em;
-        border-radius: 100%;
-        border: solid 1px;
-    }
-
-        .spotlight .image img {
-            display: block;
-            border-radius: 100%;
-            width: 16em;
-        }
-
-    @media screen and (max-width: 980px) {
-
-        .spotlight {
-            -moz-flex-direction: column-reverse;
-            -webkit-flex-direction: column-reverse;
-            -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-            text-align: column-reverse;
-        }
-
-            .spotlight .content {
-                -moz-flex: 0 1 auto;
-                -webkit-flex: 0 1 auto;
-                -ms-flex: 0 1 auto;
-                flex: 0 1 auto;
-                width: 100%;
-            }
-
-                .spotlight .content header.major h2:after {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-
-                .spotlight .content .actions {
-                    -moz-justify-content: center;
-                    -webkit-justify-content: center;
-                    -ms-justify-content: center;
-                    justify-content: center;
-                    width: calc(100% + 1em);
-                }
-
-            .spotlight .image {
-                -moz-flex: 0 1 auto;
-                -webkit-flex: 0 1 auto;
-                -ms-flex: 0 1 auto;
-                flex: 0 1 auto;
-                margin-left: 0;
-                margin-bottom: 2em;
-            }
-
-    }
-
-    @media screen and (max-width: 736px) {
-
-        .spotlight .image {
-            padding: 0.35em;;
-        }
-
-            .spotlight .image img {
-                width: 12em;
-            }
-
-    }
-
-.spotlight .image {
-    border-color: rgb(133, 133, 133);
-}
-
 /* Main content */
 #main {
     max-width: none;
@@ -321,6 +141,95 @@ body {
 }
 
 
+/* Spotlight */
+.spotlight {
+    display: flex;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    gap: 3em;
+    max-width: 1200px; /* keep it centered within a container */
+    margin: 2em auto;  /* center the whole spotlight */
+    padding: 0 2em;    /* add padding so content isn't too far left */
+    padding-top: 1em;
+    margin-bottom: 50px;
+}
+
+.spotlight .content {
+    flex: 1;
+}
+
+.spotlight .content > :last-child {
+    margin-bottom: 0;
+}
+
+.spotlight .content header.major {
+    margin: 0 0 2em 0;
+}
+
+.spotlight .image {
+    display: inline-block;
+    margin-left: 4em;
+    padding: 0.65em;
+    border-radius: 100%;
+    border: solid 1px;
+}
+
+.spotlight .image img {
+    display: block;
+    border-radius: 100%;
+    width: 16em;
+}
+
+    @media screen and (max-width: 980px) {
+
+        .spotlight {
+            flex-direction: column-reverse;
+            text-align: column-reverse;
+        }
+
+            .spotlight .content {
+                -moz-flex: 0 1 auto;
+                -webkit-flex: 0 1 auto;
+                -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+                width: 100%;
+            }
+
+                .spotlight .content header.major h2:after {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .spotlight .content .actions {
+                    justify-content: center;
+                    width: calc(100% + 1em);
+                }
+
+            .spotlight .image {
+                flex: 0 1 auto;
+                margin-left: 0;
+                margin-bottom: 2em;
+            }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+        .spotlight .image {
+            padding: 0.35em;;
+        }
+
+            .spotlight .image img {
+                width: 12em;
+            }
+    }
+
+.spotlight .image {
+    border-color: rgb(133, 133, 133);
+}
+
 
 /* Intro text */
 #main h2
@@ -328,7 +237,14 @@ body {
     text-align: center;
     color: #424040;
     font-size: 36px;
+    margin: 0;
 }
+
+#main .content
+{
+    margin: 0;
+}
+
 #main p{
     text-align: center;
     color: #424040;
@@ -392,7 +308,6 @@ body {
         padding: 10px 20px;
         font-size: 18px;
         margin: 0px 0px;
-    
     }
             }
 
@@ -408,69 +323,78 @@ body {
                 #intro a.button {
                     padding: 7px 10px;
                     font-size: 13px;
-                
                 }
             }
 
 
-            .project-container {
-                position: relative;
-              }
-              .project-cards-wrapper {
-                display: flex;
-                overflow-x: auto;
-                scroll-behavior: smooth;
-                padding: 20px 0;
-              }
-              .project-card {
-                flex: 0 0 auto;
-                width: 300px;
-                margin-right: 20px;
-              }
-              .nav-btn {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background-color: rgba(0,0,0,0.5);
-                border: none;
-                color: white;
-                padding: 10px;
-                cursor: pointer;
-                z-index: 10;
-              }
-              .nav-left {
-                left: 0;
-              }
-              .nav-right {
-                right: 0;
-              }
+/* Project */
+.project-container {
+    position: relative;
+}
 
-              .contact-section {
-                padding: 60px 0;
-                background-color: #f8f9fa;
-                text-align: center;
-              }
-              .contact-icons a {
-                color: #333;
-                margin: 0 15px;
-                font-size: 2rem;
-                transition: color 0.3s;
-              }
-              .contact-icons a:hover {
-                color: #007bff; /* Bootstrap primary color */
-              }
-              .email-link {
-                display: block;
-                margin-top: 20px;
-                font-size: 1.2rem;
-                color: #333;
-                text-decoration: none;
-              }
-              .email-link:hover {
-                color: #007bff;
-              }
+.project-cards-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
 
-              /* Reviews Section */
+.project-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.nav-left {
+    left: 0;
+}
+
+.nav-right {
+    right: 0;
+}
+
+.contact-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.contact-icons a {
+    color: #333;
+    margin: 0 15px;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+    color: #007bff; 
+}
+.email-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    color: #007bff;
+}
+
+
+/* Reviews Section */
 .reviews-section {
     background-color: #f8f9fa;
   }

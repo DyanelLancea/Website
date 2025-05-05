@@ -23,7 +23,7 @@
             <!-- Navbar with Scrollspy -->
             <nav id="Navbar" class="navbar bg-body-tertiary px-3 sticky-top">
               <a class="navbar-brand" href="#" id="backToTop">Back to Top</a>
-              <ul class="nav nav-pills">
+              <ul class="nav nav-pills ms-auto">
                 <li class="nav-item">
                   <a class="nav-link delayed-scroll" href="#projects">Projects</a>
                 </li>
@@ -43,7 +43,7 @@
                                 <h2>My name is Lancea!</h2>
                             </header>
                             <p>I am a graduating Computer Engineering Student of 
-                                <a href="https://www.tp.edu.sg/schools-and-courses/students/schools/eng/computer-engineering.html">Temasek Polytechnic.</a> 
+                                <a class="decorated-link" href="https://www.tp.edu.sg/schools-and-courses/students/schools/eng/computer-engineering.html">Temasek Polytechnic.</a> 
                                 You are looking at my website that I personally designed and coded.
                             </p>
                             <a href="resumePage/resume.html" class="button">Take a look at my Resume</a>
@@ -55,11 +55,11 @@
 
                 <section id="about">
                     <h2>About Me</h2>
-                    <p> Currently, I am enjoying my holidays by working as a Freelance STEM Trainer (under 
-                      <a href="https://www.linkedin.com/company/ep-education-sg/?originalSubdomain=sg">EP-Tec Solutions</a>), as well as creating my own projects! Check them out in the 
-                      <a href="#projects">Projects</a> section below.</p>
+                    <p> Currently, I am enjoying my holidays by working as a Freelance STEM Trainer (
+                      <a class="decorated-link"href="https://www.linkedin.com/company/ep-education-sg/?originalSubdomain=sg">EP-Tec Solutions</a>), as well as creating my own projects! Check them out in the 
+                      <a class="decorated-link" href="#projects">Projects</a> section below.</p>
                     
-                    <!-- Nav tabs -->
+                    <!-- About Me nav tabs -->
                     <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
                         <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="work-tab" data-bs-toggle="tab" data-bs-target="#work" type="button" role="tab">Work Experience</button>
@@ -71,21 +71,46 @@
                     
                     <!-- Tab content -->
                     <div class="tab-content" id="aboutTabsContent">
+                      <!-- Work Experience -->
                         <div class="tab-pane fade show active" id="work" role="tabpanel" aria-labelledby="work-tab">
                         <ul>
                             <li><strong>Intern at EP-Tec Solutions</strong> (June 2023 - Aug 2023)
-                            <p>Worked on various projects involving XYZ.</p>
+                            <p>EP-Edu dept. Intern
+                              <br>Research and curate educational programmes for educational institutes (Primary 4 to Secondary 2students).
+                              <br>Educational programmes includes coding, loT, robotics, drones, and STEM.
+                              <br>Manage and teach classes for lessons.
+                              <br> *PHOTO*
+                            </p>
                             </li>
                             <!-- More work experiences -->
                         </ul>
                         </div>
+
+                        <!-- Education -->
                         <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="edu-tab">
                         <ul>
-                            <li><strong>Temasek Polytechnic</strong> (Diploma in XYZ)
-                            <p>Relevant courses included ...</p>
+                            <li><strong>Diploma in Computer Engineering</strong> (Temasek Polytechnic, School of Engineering 2025) 
+                              <p>Cumulative GPA: 3.3/4.0,
+                                <br>Relevant courses included: Full-Stack Development, AI & Machine Learning, Internet of Things (IoT), Object Oriented Programming
+                                <br> *PHOTO*
+                              </p>
                             </li>
-                            <!-- More education experiences -->
-                        </ul>
+
+                            <li><strong>O'Levels, Triple Science</strong> (East Spring Secondary School 2021) 
+                              <p>L1R4 net aggregate score: 13,
+                                <br>Relevant subjects include: Mathematics (A1), Additional Mathematics (A2)
+                                <br>Leadership positions: Netball EXCO Secretary, Sports Leader EXCO Head of Communications
+                                <br> *PHOTO*
+                              </p>
+                            </li> 
+
+                            <li><strong>PSLE</strong> (Gongshang Primary School 2017) 
+                              <p>Aggregate score: 199,
+                                <br>CCA: Art Club
+                              </p>
+                            </li>
+
+                          </ul>
                         </div>
                     </div>
                   </section>
@@ -243,31 +268,8 @@
 
         <!-- Scripts -->
             <script src="assets/js/project.cards.js"></script>   
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
             <script src="assets/js/smooth.scroll.js"></script>
-            <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const backToTop = document.getElementById("backToTop");
-                const introSection = document.querySelector("#intro");
-            
-                const observer = new IntersectionObserver(
-                  ([entry]) => {
-                    if (!entry.isIntersecting) {
-                      backToTop.classList.remove("d-none");
-                    } else {
-                      backToTop.classList.add("d-none");
-                    }
-                  },
-                  {
-                    root: null,
-                    threshold: 0,
-                  }
-                );
-            
-                observer.observe(introSection);
-              });
-            </script>
-            
-            
+            <script src="assets/js/backtotop.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>            
     </body>
 </html>

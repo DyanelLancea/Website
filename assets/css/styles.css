@@ -96,6 +96,7 @@ body {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     z-index: 999;
+    width: 100%;
 }
     
 #Navbar .nav-link {
@@ -117,11 +118,6 @@ body {
     margin-bottom:0;
 }
 
-
-
-#about {
-    margin: 2em 3em;
-}
    
 /* Main content */
 #main {
@@ -130,12 +126,8 @@ body {
     margin: 0 auto;
     padding-top: 20px;
     flex: 1;
-    -moz-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-    -webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-    -ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
     transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
     position: relative;
-    border-radius: 0.25em;
     background-color: #d4dde8;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -144,9 +136,6 @@ body {
 /* Spotlight */
 .spotlight {
     display: flex;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
     align-items: center;
     gap: 3em;
     max-width: 1200px; /* keep it centered within a container */
@@ -158,6 +147,10 @@ body {
 
 .spotlight .content {
     flex: 1;
+}
+
+.spotlight .content .p {
+    font-size: clamp(3rem, 3vw, 5rem);
 }
 
 .spotlight .content > :last-child {
@@ -190,9 +183,6 @@ body {
         }
 
             .spotlight .content {
-                -moz-flex: 0 1 auto;
-                -webkit-flex: 0 1 auto;
-                -ms-flex: 0 1 auto;
                 flex: 0 1 auto;
                 width: 100%;
             }
@@ -218,7 +208,7 @@ body {
     @media screen and (max-width: 736px) {
 
         .spotlight .image {
-            padding: 0.35em;;
+            padding: 0.35em;
         }
 
             .spotlight .image img {
@@ -230,22 +220,19 @@ body {
     border-color: rgb(133, 133, 133);
 }
 
-
-/* Intro text */
-#main h2
-{
+/* Main */
+#main h2 {
     text-align: center;
     color: #424040;
     font-size: 36px;
     margin: 0;
 }
 
-#main .content
-{
+#main .content {
     margin: 0;
 }
 
-#main p{
+#main p {
     text-align: center;
     color: #424040;
     font-size: 20px;
@@ -253,22 +240,26 @@ body {
 }
 
 
-/* Intro links */
-#intro a {
+/* Intro */
+#intro .spotlight .content header.major {
+    margin-bottom: 0.5em; /* or 0 if you want no space */
+}
+
+.decorated-link {
     color: #424040;
-    text-decoration:underline;
+    text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
 }
 
-#intro a:hover{
+.decorated-link:hover {
     color: rgb(58, 10, 118);
     font-weight: bold;
-    text-decoration:underline;
+    text-decoration: underline;
     text-decoration-style: solid;
-
 }
+
 
 /* Intro Button */
 #intro a.button {
@@ -276,7 +267,6 @@ body {
     border-radius: 20px;
     padding: 15px 25px;
     text-decoration: none;
-    display: inline-block; /*adding more buttons*/
     font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
@@ -325,6 +315,15 @@ body {
                     font-size: 13px;
                 }
             }
+
+/* About Me */
+#about {
+    margin: 2em 3em;
+}
+
+#about p {
+    margin-top: 0.3em;
+}
 
 
 /* Project */

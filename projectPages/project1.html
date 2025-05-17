@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Title</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .section-title {
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .project-img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .video-container iframe, .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+
+  <!-- Title -->
+  <h1 class="text-center mb-5">Flood Monitoring Drone System</h1>
+
+  <!-- Introduction -->
+  <section>
+    <h2 class="section-title">Introduction</h2>
+    <p>This section introduces the problem the project is addressing, the purpose of the project, and key motivations behind building it.</p>
+
+    <!-- Video Embed -->
+    <div class="video-container my-4">
+      <!-- You can use <iframe> for YouTube or <video> for local -->
+      <!-- Example: YouTube -->
+      <!-- <iframe src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe> -->
+
+      <!-- Example: Local video -->
+      <video controls>
+        <source src="path_to_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Project Description -->
+  <section>
+    <h2 class="section-title">Project Description</h2>
+    <p>Explain what your project does, what makes it unique, and how it solves the problem. This is the general overview for readers unfamiliar with your work.</p>
+  </section>
+
+  <!-- Project Flow and Technology Outline -->
+  <section>
+    <h2 class="section-title">Project Flow and Technology Outline</h2>
+    <p>Break down the system architecture, data flow, and technologies used (e.g., microcontrollers, APIs, dashboards, sensors).</p>
+    <img src="images/tech_diagram.png" alt="Project Flow Diagram" class="project-img">
+    <img src="images/dashboard_screenshot.png" alt="Dashboard Screenshot" class="project-img">
+  </section>
+
+  <!-- Prototype and Housing -->
+  <section>
+    <h2 class="section-title">Prototype and Housing</h2>
+    <p>Showcase how the prototype looks physically. Include 3D printed cases, breadboards, or actual drone images.</p>
+    <img src="images/prototype_1.jpg" alt="Prototype Image 1" class="project-img">
+    <img src="images/prototype_2.jpg" alt="Prototype Image 2" class="project-img">
+  </section>
+
+  <!-- Acknowledgements -->
+  <section>
+    <h2 class="section-title">Acknowledgements</h2>
+    <p>Mention any mentors, collaborators, or organizations that supported your project.</p>
+    <img src="images/ack_team.jpg" alt="Acknowledgement Group" class="project-img">
+  </section>
+
+  <!-- References -->
+  <section>
+    <h2 class="section-title">References</h2>
+    <ul>
+      <li>Reference 1 – [Paper/Website/Book]</li>
+      <li>Reference 2 – [Paper/Website/Book]</li>
+      <li>Reference 3 – [Paper/Website/Book]</li>
+    </ul>
+  </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

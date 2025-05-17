@@ -336,13 +336,34 @@ body {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px 0;
+    flex-wrap: nowrap;
 }
 
 .project-card {
     flex: 0 0 auto;
-    width: 300px;
+    width: clamp(280px, 90%, 360px);
     margin-right: 20px;
+    cursor: pointer; 
+    transition: transform 0.2s ease;
 }
+
+.project-card:hover {
+    transform: scale(1.02); /* Optional: subtle hover effect */
+}
+
+
+.card-body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    text-align: center;
+}
+
 
 .nav-btn {
     position: absolute;
@@ -391,6 +412,11 @@ body {
 .email-link:hover {
     color: #007bff;
 }
+
+.contact-icons a {
+  text-decoration: none;
+}
+
 
 
 /* Reviews Section */

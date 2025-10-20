@@ -1,0 +1,43 @@
+.section-title {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 60%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-container iframe, .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.px-4 {
+  margin-bottom: 4rem;
+}
+
+.image-title {
+  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
+  color: #424040;
+}
+
+.analysis-text {
+  text-align: left;
+}

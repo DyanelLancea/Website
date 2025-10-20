@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Monitoring Drone System - Dyanel Lancea</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/project1.css">
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+  
+  <!-- Header -->
+  <header id="header" class="alt">
+    <h1>Flood Monitoring Drone System ᯓ ✈︎</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav id="Navbar" class="navbar bg-body-tertiary px-3 sticky-top">
+    <a class="navbar-brand nav-link" href="../index.html">← Back to Home</a>
+    <ul class="nav nav-pills ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <div class="container py-5">
+
+      <!-- Title
+      <h1 class="text-center mb-5">Flood Monitoring Drone System</h1> -->
+
+      <!-- Introduction -->
+      <section class="px-4">
+        <h2 class="section-title">Intro</h2>
+        <p>A section of my Major Project in Temasek Polytechnic. </p>
+
+        <!-- Video Embed -->
+        <div class="video-container my-4 mx-5">
+          <iframe src="https://www.youtube.com/embed/m8Vxb_OpQuY" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+      </section>
+
+      <!-- Project Description -->
+      <section class="px-4">
+        <h2 class="section-title">About</h2>
+        <p>Floods are become more and more common in Singapore, with some that have resulted in the destruction to environment or property
+          This is a smart drone equipped with sensors and collects real-time:</p>
+        <ol>
+          <li>Temperature 🌡️</li>
+          <li>Humidity 💦</li>
+          <li>Visual aerial data 🖼️</li>
+        </ol>
+        <p>The drone's mobility allows coverage of inaccessible areas, and the photos taken
+          provides a broader view of the flooding! This makes the superior choice for rapid response and urban planning.</p>
+      </section>
+
+      <!-- Project Flow and Technology Outline -->
+      <section class="px-4">
+        <h2 class="section-title">Technology Outline</h2>
+        <p> For the drone, we used the Tello DJI Drone which is now discontinued. Our architecture stack includes 
+          Telegraf, InfluxDB, and Grafana (TIG). The ESP32(server) and RPi(client) are connected to the same AP.</p>
+        <p class="analysis-text"><strong>How the analysis works:</strong><br>
+        The image from the drone is sent as a base64-encoded string to the RPI. Then it is
+         sent as a JSON payload to Google Vertex(LLM) AI which is first decoded then analysed.
+          The image is sent with a prompt that asks to look for signs such as high-water levels, 
+          blocked drains, or flooding to determine if there is a potential overflow. 
+          Lastly, the image (in base64 format) and the AI analysis results are both sent to InfluxDB directly 
+          via an API request.</p>
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <h3 class="image-title">System Architecture Diagram</h3>
+            <img src="../assets/images/Sys-arch-diag.png" alt="System Architecture Diagram" class="project-img">
+          </div>
+          <div class="col-md-6 text-center">
+            <h3 class="image-title">Dashboard Screenshot</h3>
+            <img src="../assets/images/Dashboard.png" alt="Dashboard Screenshot" class="project-img">
+          </div>
+        </div>
+        <p class="analysis-text"><strong>How the dashboard works:</strong><br>
+        Additionally, Grafana is integrated with an alerting system such that
+         we can receive alert notifications in the Telegram app channel whenever there is overflow detected.
+          A visualisation of separate data conditions (temperature, humidiy and visual aerial) from 
+         <a class="decorated-link" href="https://openweathermap.org/api">OpenWeatherMap</a> 
+         is also included.
+        </p>
+      </section>
+
+      <!-- Prototype and Housing -->
+      <section class="px-4">
+        <h2 class="section-title">Prototype and Housing</h2>
+        <p>The software we used to design the housing was 
+          <a class="decorated-link" href="https://www.tinkercad.com/">Tinker Cad.</a> 
+        </p>
+        <img src="../assets/images/FMDS_3D.png" alt="Prototype Image 1" class="project-img">
+        <img src="../assets/images/FMDS_with_Drone.jpg" alt="Prototype Image 2" class="project-img">
+      </section>
+
+      <!-- Acknowledgements -->
+      <section class="px-4" id="acknowledgements">
+        <h2 class="section-title">Acknowledgements</h2>
+        <p>Huge appreciation for 
+          <a class="decorated-link" href="https://www.linkedin.com/in/emir-ezzuddin-84975b1a9/">Emir</a> 
+          and
+          <a class="decorated-link" href="https://www.linkedin.com/in/lorenzo-ho-439255254/"> Lorenzo</a> 
+           for building this project with me. And for
+          <a class="decorated-link" href="https://www.linkedin.com/in/foo-tze-wan-2abb75bb/"> Mr Foo Tze Wan </a> 
+           for his unwavering support
+           and guidance. This was lots of fun to build and would not have been possible without everyone's hard work!</p>
+        <img src="../assets/images/acknowledgement.jpg" alt="Acknowledgement Group" class="project-img">
+        <img src="../assets/images/group-members.jpg" alt="Acknowledgement Group" class="project-img">
+
+      </section>
+
+      <!-- References -->
+      <section class="px-4">
+        <h2 class="section-title">References</h2>
+        <ul>
+          <li>influxdata ® Documentation. [Online] Available: 
+              <a class="decorated-link" href="https://docs.influxdata.com/telegraf"> https://docs.influxdata.com/telegraf </a> 
+          </li>
+          <li>DJITelloPy GitHub Repository. [Online] Available: 
+              <a class="decorated-link" href="https://github.com/damiafuentes/DJITelloPy"> https://github.com/damiafuentes/DJITelloPy </a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/backtotop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

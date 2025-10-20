@@ -1,4 +1,4 @@
-function scrollLeft() {
+function scrollProjectsLeft() {
   document.getElementById('cardsWrapper').scrollBy({ left: -320, behavior: 'smooth' });
 }
 

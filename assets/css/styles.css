@@ -416,6 +416,21 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.project-card .card-date {
+    display: block;
+    color: #34495e;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    background-color: #ecf0f1;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .nav-btn {
     position: absolute;

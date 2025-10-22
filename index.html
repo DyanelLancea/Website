@@ -41,12 +41,12 @@
                     <div class="spotlight">
                         <div class="content">
                             <header class="major">
-                                <h2>My name is Lancea! <img src="../assets/images/hammy.png" alt="heart" style="width: 70px; height: 70px; "></h2>
+                                <h2><strong>My name is Lancea! </strong> <img src="assets/images/hammy.png" alt="heart" style="width: 70px; height: 70px; "></h2>
                             </header>
                             <p>I am an undergraduate Applied Computing (Fintech) student from 
                                 <a class="decorated-link" href="https://www.singaporetech.edu.sg/undergraduate-programmes/applied-computing-fintech">SIT</a> 
                                 , with a Diploma in Computer Engineering from  
-                                <a class="decorated-link" href="https://www.tp.edu.sg/schools-and-courses/students/schools/eng/computer-engineering.html">Temasek Polytechnic.</a> 
+                                <a class="decorated-link" href="https://www.tp.edu.sg/schools-and-courses/students/schools/eng/computer-engineering.html">TP.</a> 
                                 You are looking at my static website that I personally designed and coded.
                             </p>
                                 <a href="assets/documents/Official-Resume.pdf" class="button">Take a look at my Resume</a>
@@ -58,24 +58,73 @@
                         
 
                 <section id="about">
-                    <h2>About Me</h2>
+                    <h2><strong>About Me</strong></h2>
                     <p> During my free time, I work as a Freelance STEM Trainer (
                       <a class="decorated-link"href="https://www.zenitanteducation.com/">Zenitant </a>), as well as creating projects! Check them out in the 
                       <a class="decorated-link" href="#projects">Projects</a> section below.</p>
                       
                   <section id = "projects">
                     <div class="container my-5">
-                          <h2 class="text-center mb-4">My Projects</h2>
+                          <h2 class="text-center mb-4"><strong>Personal Projects</strong></h2>
                         
                           <div class="project-container">
                             
                             <!-- Left Arrow -->
-                            <button class="nav-btn nav-left" onclick="scrollProjectsLeft()">
+                            <button class="nav-btn nav-left" onclick="scrollProjectsLeft('personalCardsWrapper')">
                               &#10094;
                             </button>
                         
                             <!-- Cards Scrollable Row -->
-                            <div class="project-cards-wrapper" id="cardsWrapper">
+                            <div class="project-cards-wrapper" id="personalCardsWrapper">
+                        
+                        
+                              <!-- Card 3 -->
+                              <a href="project-pages/project2.html" class="text-decoration-none">
+                                <div class="card project-card">
+                                  <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 3">
+                                  <div class="card-body">
+                                    <a href="resumePage/resume.html" class="card-title">XX</a>
+                                    <small class="card-date">Dec 2023 - Feb 2024</small>
+                                    <p class="card-text">xxx</p>
+                                  </div>
+                                </div>
+                              </a>
+                        
+                              <!-- Card 4 -->
+                              <a href="project-pages/project2.html" class="text-decoration-none">
+                                <div class="card project-card">
+                                  <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 4">
+                                  <div class="card-body">
+                                    <a href="resumePage/resume.html" class="card-title">XX</a>
+                                    <p class="card-text">(xxx).</p>
+                                  </div>
+                                </div>
+                              </a>
+                        
+                            </div>
+                        
+                            <!-- Right Arrow -->
+                            <button class="nav-btn nav-right" onclick="scrollRight('personalCardsWrapper')">
+                              &#10095;
+                            </button>
+                        
+                          </div>
+                        
+                    </div>
+
+                  <section id = "projects">
+                    <div class="container my-5">
+                          <h2 class="text-center mb-4"><strong>School Projects</strong></h2>
+                        
+                          <div class="project-container">
+                            
+                            <!-- Left Arrow -->
+                            <button class="nav-btn nav-left" onclick="scrollProjectsLeft('schoolCardsWrapper')">
+                              &#10094;
+                            </button>
+                        
+                            <!-- Cards Scrollable Row -->
+                            <div class="project-cards-wrapper" id="schoolCardsWrapper">
                         
                               <!-- Card 1 , Project 2 -->
                               <a href="project-pages/project2.html" class="text-decoration-none">
@@ -139,7 +188,7 @@
                             </div>
                         
                             <!-- Right Arrow -->
-                            <button class="nav-btn nav-right" onclick="scrollRight()">
+                            <button class="nav-btn nav-right" onclick="scrollRight('schoolCardsWrapper')">
                               &#10095;
                             </button>
                         

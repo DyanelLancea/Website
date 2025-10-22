@@ -260,7 +260,7 @@ body {
 #main p {
     text-align: center;
     color: #424040;
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom:20px;
 }
 
@@ -325,32 +325,32 @@ body {
 
 @media screen and (max-width: 768px) {
     #main h2 {
-        font-size: 30px
+        font-size: 40px
     }
     
     #main p {
-        font-size: 20px;
+        font-size: 33px;
     }
 
     #intro a.button {
-        padding: 10px 20px;
-        font-size: 18px;
+        padding: 12px 24px;
+        font-size: 28px;
         margin: 0px 0px;
     }
             }
 
             @media screen and (max-width: 480px) {
                 #main h2 {
-                    font-size: 20px
+                    font-size: 38px
                 }
                 
                 #main p {
-                    font-size: 13px;
+                    font-size: 35px;
                 }
 
                 #intro a.button {
-                    padding: 7px 10px;
-                    font-size: 13px;
+                    padding: 15px 30px;
+                    font-size: 25px;
                 }
             }
 
@@ -403,6 +403,10 @@ body {
     .project-card .card-body {
         padding: 1rem;
     }
+    
+    .project-card .card-text {
+        font-size: 0.85rem !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -424,7 +428,7 @@ body {
     }
     
     .project-card .card-text {
-        font-size: 0.85rem;
+        font-size: 1rem !important;
     }
 }
 
@@ -472,7 +476,7 @@ body {
 }
 
 .project-card .card-text {
-    font-size: 0.95rem;
+    font-size: 1.3rem !important;
     color: #5a6c7d;
     line-height: 1.6;
     text-align: left;

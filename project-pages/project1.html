@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flood Monitoring Drone System - Dyanel Lancea</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
@@ -31,7 +33,7 @@
 
   <!-- Main -->
   <div id="main">
-    <div class="container py-5">
+    <div class="container-fluid py-5">
 
       <!-- Title
       <h1 class="text-center mb-5">Flood Monitoring Drone System</h1> -->
@@ -39,7 +41,7 @@
       <!-- Introduction -->
       <section class="px-4">
         <h2 class="section-title">Intro</h2>
-        <p>A section of my Major Project in Temasek Polytechnic. </p>
+        <p>This is a section of my Major Project from my time in TP </p>
 
         <!-- Video Embed -->
         <div class="video-container my-4 mx-5">
@@ -51,29 +53,34 @@
       <!-- Project Description -->
       <section class="px-4">
         <h2 class="section-title">About</h2>
-        <p>Floods are become more and more common in Singapore, with some that have resulted in the destruction to environment or property
-          This is a smart drone equipped with sensors and collects real-time:</p>
+        <p>Floods are becoming increasingly common in Singapore, 
+          often causing damage to both the environment and property. 
+          To address this issue, we have designed a smart drone capable of navigating 
+          inaccessible areas while equipped with sensors to collect real-time 
+          environmental data, including:</p>
         <ol>
           <li>Temperature 🌡️</li>
           <li>Humidity 💦</li>
           <li>Visual aerial data 🖼️</li>
         </ol>
-        <p>The drone's mobility allows coverage of inaccessible areas, and the photos taken
-          provides a broader view of the flooding! This makes the superior choice for rapid response and urban planning.</p>
       </section>
 
       <!-- Project Flow and Technology Outline -->
       <section class="px-4">
         <h2 class="section-title">Technology Outline</h2>
-        <p> For the drone, we used the Tello DJI Drone which is now discontinued. Our architecture stack includes 
-          Telegraf, InfluxDB, and Grafana (TIG). The ESP32(server) and RPi(client) are connected to the same AP.</p>
-        <p class="analysis-text"><strong>How the analysis works:</strong><br>
-        The image from the drone is sent as a base64-encoded string to the RPI. Then it is
-         sent as a JSON payload to Google Vertex(LLM) AI which is first decoded then analysed.
-          The image is sent with a prompt that asks to look for signs such as high-water levels, 
-          blocked drains, or flooding to determine if there is a potential overflow. 
-          Lastly, the image (in base64 format) and the AI analysis results are both sent to InfluxDB directly 
-          via an API request.</p>
+        <p> Our architecture stack is built on the TIG framework (Telegraf, InfluxDB, and Grafana). 
+          The ESP32 (server) and Raspberry Pi (client) are connected to the same access point (AP) 
+          for seamless data communication. </p>
+
+        <p class="analysis-text"><strong>Image analysis workflow:</strong><br>
+        Images captured by the drone are transmitted to the Raspberry Pi as Base64-encoded strings. 
+        The Raspberry Pi then packages these images into a JSON payload and sends them to Google Vertex AI (LLM) 
+        for analysis. Within Vertex AI, the image is decoded and processed based on a custom prompt designed to
+         identify signs of potential flooding, such as high water levels, blocked drains, or overflow areas. 
+         The analysis results, along with the original Base64 image, are then sent directly to InfluxDB via an 
+         API request for storage and monitoring.
+        
+        </p>
         <div class="row">
           <div class="col-md-6 text-center">
             <h3 class="image-title">System Architecture Diagram</h3>
@@ -84,28 +91,54 @@
             <img src="../assets/images/Dashboard.png" alt="Dashboard Screenshot" class="project-img">
           </div>
         </div>
-        <p class="analysis-text"><strong>How the dashboard works:</strong><br>
-        Additionally, Grafana is integrated with an alerting system such that
-         we can receive alert notifications in the Telegram app channel whenever there is overflow detected.
-          A visualisation of separate data conditions (temperature, humidiy and visual aerial) from 
-         <a class="decorated-link" href="https://openweathermap.org/api">OpenWeatherMap</a> 
-         is also included.
+        <p class="analysis-text"><strong>Dashboard & alerts:</strong><br>
+        Grafana is integrated with an alerting system, allowing real-time notifications to be sent to a Telegram channel 
+        whenever potential overflow or flood risks are detected. The dashboard also includes visualisations of the 
+        environmental data (temperature, and humidity) which are retrieved from 
+        <a class="decorated-link" href="https://openweathermap.org/api">OpenWeatherMap</a> 
+         to complement on-site drone observations. 
         </p>
       </section>
 
       <!-- Prototype and Housing -->
       <section class="px-4">
         <h2 class="section-title">Prototype and Housing</h2>
-        <p>The software we used to design the housing was 
+        <p>Software used:
           <a class="decorated-link" href="https://www.tinkercad.com/">Tinker Cad.</a> 
         </p>
         <img src="../assets/images/FMDS_3D.png" alt="Prototype Image 1" class="project-img">
         <img src="../assets/images/FMDS_with_Drone.JPG" alt="Prototype Image 2" class="project-img">
       </section>
 
+      <!-- Components Used -->
+      <section class="px-4">
+        <h2 class="section-title">Components Used</h2>
+        <div class="row">
+          <div class="col-6 components-list">
+            <h3 class="image-title">Hardware</h3>
+            <ul>
+              <li>DJI Tello Drone (Discontinued)</li>
+              <li>ESP32 Microcontroller</li>
+              <li>Raspberry Pi 4</li>
+              <li>DHT22 Temperature & Humidity Sensor</li>
+            </ul>
+          </div>
+          <div class="col-6 components-list">
+            <h3 class="image-title">Software</h3>
+            <ul>
+              <li>InfluxDB (Time Series Database)</li>
+              <li>Grafana (Data Visualization)</li>
+              <li>Telegraf (Data Collection Agent)</li>
+              <li>Google Vertex AI (LLM for Image Analysis)</li>
+              <li>Telegram Bot API</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- Acknowledgements -->
       <section class="px-4" id="acknowledgements">
-        <h2 class="section-title">Acknowledgements</h2>
+        <h2 class="section-title">Acknowledgements <img src="../assets/images/batman.png" alt="heart" style="width: 60px; height: 60px; "> </h2>
         <p>Huge appreciation for 
           <a class="decorated-link" href="https://www.linkedin.com/in/emir-ezzuddin-84975b1a9/">Emir</a> 
           and
@@ -113,9 +146,10 @@
            for building this project with me. And for
           <a class="decorated-link" href="https://www.linkedin.com/in/foo-tze-wan-2abb75bb/"> Mr Foo Tze Wan </a> 
            for his unwavering support
-           and guidance. This was lots of fun to build and would not have been possible without everyone's hard work!</p>
-        <img src="../assets/images/acknowledgement.jpg" alt="Acknowledgement Group" class="project-img">
-        <img src="../assets/images/group-members.jpg" alt="Acknowledgement Group" class="project-img">
+           and guidance. This was lots of fun to build and would not have been possible without everyone's hard work! 
+           </p>
+        <img src="../assets/images/acknowledgement.jpg" alt="Acknowledgement Group" class="project-img-no-modal">
+        <img src="../assets/images/group-members.jpg" alt="Acknowledgement Group" class="project-img-no-modal">
 
       </section>
 
@@ -137,6 +171,8 @@
 </div>
 
 <script src="../assets/js/backtotop.js"></script>
+<script src="../assets/js/scroll-animation.js"></script>
+<script src="../assets/js/image-modal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

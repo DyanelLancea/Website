@@ -46,6 +46,13 @@ body {
     margin: 0 auto
 }
 
+@media screen and (max-width: 768px) {
+    #wrapper {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
 
 
 /* Header */
@@ -115,6 +122,25 @@ body {
 
 #Navbar .navbar{
     margin-bottom:0;
+}
+
+@media screen and (max-width: 768px) {
+    #Navbar {
+        justify-content: center;
+    }
+    
+    #Navbar .navbar-brand {
+        display: none;
+    }
+    
+    #Navbar .nav {
+        margin: 0 !important;
+    }
+    
+    #Navbar .nav-link {
+        font-size: 1.21rem;
+        margin: 0 5px;
+    }
 }
 
    
@@ -303,7 +329,7 @@ body {
     }
     
     #main p {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #intro a.button {
@@ -362,6 +388,44 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
+        width: clamp(200px, 75%, 250px);
+        margin-right: 12px;
+    }
+    
+    .project-card .card-img-top {
+        height: 140px;
+    }
+    
+    .project-card .card-body {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-card {
+        width: clamp(180px, 70%, 220px);
+        margin-right: 8px;
+    }
+    
+    .project-card .card-img-top {
+        height: 120px;
+    }
+    
+    .project-card .card-body {
+        padding: 0.8rem;
+    }
+    
+    .project-card .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .project-card .card-text {
+        font-size: 0.85rem;
+    }
 }
 
 .project-card:hover {
@@ -460,11 +524,11 @@ body {
 }
 
 .nav-left {
-    left: 10px;
+    left: -60px;
 }
 
 .nav-right {
-    right: 10px;
+    right: -60px;
 }
 
 .contact-section {
@@ -514,3 +578,49 @@ body {
   .reviews-section .card:hover {
     transform: translateY(-5px);
   }
+
+@media screen and (max-width: 768px) {
+    .reviews-section {
+        padding: 40px 0;
+    }
+    
+    .reviews-section .card {
+        margin-bottom: 1rem;
+    }
+    
+    .reviews-section .card-body {
+        padding: 1.2rem;
+    }
+    
+    .reviews-section .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .reviews-section .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .reviews-section {
+        padding: 30px 0;
+    }
+    
+    .reviews-section .card-body {
+        padding: 1rem;
+    }
+    
+    .reviews-section .card-text {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .reviews-section .card-title {
+        font-size: 1rem;
+    }
+    
+    .reviews-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}

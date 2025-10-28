@@ -79,14 +79,14 @@ body {
 }
 
 #header h1 {
-    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 8vw, 5rem);
     opacity: 0;
     animation: fadeSlideDown 1s ease-out forwards;
     animation-delay: 0.2s;
 }
 
 #header p {
-    font-size: clamp(1rem, 3vw, 1.75rem);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     letter-spacing: -0.025em;
     opacity: 0;
     animation: fadeSlideDown 1s ease-out forwards;
@@ -309,7 +309,8 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     color: #424040;
-
+    text-align: center;
+    display: inline-block;
 }
 
 #intro .button:hover {
@@ -329,7 +330,7 @@ body {
     }
     
     #main p {
-        font-size: 33px;
+        font-size: 19px;
     }
 
     #intro a.button {
@@ -345,12 +346,13 @@ body {
                 }
                 
                 #main p {
-                    font-size: 35px;
+                    font-size: 18px;
                 }
 
                 #intro a.button {
                     padding: 15px 30px;
-                    font-size: 25px;
+                    font-size: 30px;
+                    text-align: center;
                 }
             }
 
